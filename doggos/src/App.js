@@ -29,6 +29,7 @@ class App extends React.Component {
                     dogs:resp.data.message
                 })
             })
+            .catch(err=>console.log(err));
     }
 
     render() {
