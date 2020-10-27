@@ -17,11 +17,11 @@ class App extends React.Component {
             .catch(err => console.log(err))
     }
     
-    handleChange(e) {
+    handleChange = (e) => {
         this.setState({ breedType:e.target.value});
     }
 
-    handleSearch(e) {
+    handleSearch = (e) => {
         e.preventDefault();
         axios.get(`https://dog.ceo/api/breed/${this.state.breedType}/images`)
             .then(resp=>{
