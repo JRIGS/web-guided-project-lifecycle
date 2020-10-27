@@ -25,7 +25,7 @@ class App extends React.Component {
         return(
             <div className="App">
                 <h1>Search Doooogs</h1>
-                <form>
+                <form onSubmit={this.handleSearch}>
                     <input onChange={this.handleChange} type="text"/>
                     <button>Fetch Dogs</button>
                 </form>
