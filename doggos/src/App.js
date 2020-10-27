@@ -7,6 +7,16 @@ class App extends React.Component {
         breedType:""
     }
 
+    fetchDogs = (breed) => {
+        axios.get(`https://dog.ceo/api/breed/${breed}/images`)
+            .then(resp=>{
+                this.setState({
+                    dogs:resp.data.message
+                });
+            })
+            .catch(err => console.log(err))
+    }
+
     componentDidMount() {
         axios.get(`https://dog.ceo/api/breed/husky/images`)
             .then(resp=>{
