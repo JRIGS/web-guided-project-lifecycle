@@ -21,6 +21,11 @@ class App extends React.Component {
         this.setState({ breedType:e.target.value});
     }
 
+    handleSearch(e) {
+        e.preventDefault();
+        
+    }
+
     render() {
         return(
             <div className="App">
