@@ -3,7 +3,8 @@ import axios from 'axios';
 
 class App extends React.Component {
     state = {
-        dogs:[]
+        dogs:[],
+        breedType:""
     }
 
     componentDidMount() {
