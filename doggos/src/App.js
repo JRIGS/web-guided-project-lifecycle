@@ -17,6 +17,10 @@ class App extends React.Component {
             .catch(err => console.log(err))
     }
     
+    handleChange(e) {
+        this.setState({ breedType:e.target.value});
+    }
+
     render() {
         return(
             <div className="App">
