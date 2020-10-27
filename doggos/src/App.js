@@ -7,18 +7,12 @@ class App extends React.Component {
         breedType:""
     }
 
+    componentDidMount() {
+        this.fetchDogs("husky");
+    }
+    
     fetchDogs = (breed) => {
         axios.get(`https://dog.ceo/api/breed/${breed}/images`)
-            .then(resp=>{
-                this.setState({
-                    dogs:resp.data.message
-                });
-            })
-            .catch(err => console.log(err))
-    }
-
-    componentDidMount() {
-        axios.get(`https://dog.ceo/api/breed/husky/images`)
             .then(resp=>{
                 this.setState({
                     dogs:resp.data.message
@@ -33,13 +27,7 @@ class App extends React.Component {
 
     handleSearch = (e) => {
         e.preventDefault();
-        axios.get(`https://dog.ceo/api/breed/${this.state.breedType}/images`)
-            .then(resp=>{
-                this.setState({
-                    dogs:resp.data.message
-                })
-            })
-            .catch(err=>console.log(err));
+        this.fetchDogs(this.state.breedType);
     }
 
     render() {
