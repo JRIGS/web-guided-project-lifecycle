@@ -36,7 +36,7 @@ class App extends React.Component {
             <div className="App">
                 <h1>Search Doooogs</h1>
                 <form onSubmit={this.handleSearch}>
-                    <input onChange={this.handleChange} type="text"/>
+                    <input value={this.state.breedType} onChange={this.handleChange} type="text"/>
                     <button>Fetch Dogs</button>
                 </form>
                 <div className="dogContainer">
