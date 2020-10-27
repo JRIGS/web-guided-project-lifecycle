@@ -10,7 +10,7 @@ class App extends React.Component {
     componentDidMount() {
         this.fetchDogs("husky");
     }
-    
+
     fetchDogs = (breed) => {
         axios.get(`https://dog.ceo/api/breed/${breed}/images`)
             .then(resp=>{
@@ -28,6 +28,7 @@ class App extends React.Component {
     handleSearch = (e) => {
         e.preventDefault();
         this.fetchDogs(this.state.breedType);
+        this.setState({ breedType:""});
     }
 
     render() {
