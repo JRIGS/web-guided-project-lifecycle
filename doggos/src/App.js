@@ -22,7 +22,7 @@ class App extends React.Component {
             <div className="App">
                 <h1>Search Doooogs</h1>
                 <form>
-                    <input type="text"/>
+                    <input onChange={this.handleChange} type="text"/>
                     <button>Fetch Dogs</button>
                 </form>
                 <div className="dogContainer">
