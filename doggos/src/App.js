@@ -16,7 +16,7 @@ class App extends React.Component {
                 <h1>Search Doooogs</h1>
                 <div className="dogContainer">
                     {
-                        this.state.map(item=>{
+                        this.state.dogs.map(item=>{
                             return(<img src={item} alt={item}/>);
                         })
                     }
@@ -25,3 +25,5 @@ class App extends React.Component {
         )
     }
 }
+
+export default App;
