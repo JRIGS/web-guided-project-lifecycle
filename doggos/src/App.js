@@ -3,7 +3,11 @@ import axios from 'axios';
 
 class App extends React.Component {
     state = {
-        dogs:[]
+        dogs:[
+            "https://images.dog.ceo/breeds/cattledog-australian/IMG_0206.jpg",
+            "https://images.dog.ceo/breeds/cattledog-australian/IMG_1042.jpg",
+            "https://images.dog.ceo/breeds/cattledog-australian/IMG_1062.jpg"
+        ]
     }
     
     render() {
