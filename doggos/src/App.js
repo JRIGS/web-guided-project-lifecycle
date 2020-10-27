@@ -11,6 +11,10 @@ class App extends React.Component {
         this.fetchDogs("husky");
     }
 
+    componentDidUpdate(prevProps, prevState) {
+
+    }
+
     fetchDogs = (breed) => {
         axios.get(`https://dog.ceo/api/breed/${breed}/images`)
             .then(resp=>{
