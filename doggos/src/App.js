@@ -23,7 +23,12 @@ class App extends React.Component {
 
     handleSearch(e) {
         e.preventDefault();
-        
+        axios.get(`https://dog.ceo/api/breed/${this.state.breedType}/images`)
+            .then(resp=>{
+                this.setState({
+                    dogs:resp.data.message
+                })
+            })
     }
 
     render() {
