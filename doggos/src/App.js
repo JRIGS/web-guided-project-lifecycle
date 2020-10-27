@@ -12,7 +12,7 @@ class App extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevState.dogs !== this.state.dogs){
+        if (prevState.breedType !== this.state.breedType){
             console.log(this.state.breedType);
             if (this.state.breedType === 'chihuahua') {
                 // this.fetchDogs('husky');
